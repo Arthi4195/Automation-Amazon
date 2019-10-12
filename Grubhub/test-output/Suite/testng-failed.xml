@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <parameter name="password" value="1234"/>
+  <parameter name="URL" value="https://google.com"/>
+  <parameter name="username" value="abc"/>
+  <test name="Test">
+    <classes>
+      <class name="org.testng.Testing"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Test(failed)">
+    <classes>
+      <class name="org.testng.Testing">
+        <methods>
+          <include name="test3"/>
+        </methods>
+      </class> <!-- org.testng.Testing -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

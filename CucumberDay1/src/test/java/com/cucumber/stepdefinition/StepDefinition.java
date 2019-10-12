@@ -1,0 +1,50 @@
+package com.cucumber.stepdefinition;
+
+import com.cucumber.baseclass.TestBase;
+import com.cucumber.pom.LoginPage;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class StepDefinition extends TestBase {
+	
+	@Given("^User should able to launch the application$")
+	public void user_should_able_to_launch_the_application() throws Throwable {
+		LoginPage lp = new LoginPage(driver);
+		getUrl("https://www.facebook.com");
+	}
+
+	@Then("^user should be able to see the facebook logo$")
+	public void user_should_be_able_to_see_the_facebook_logo() throws Throwable {
+		LoginPage lp = new LoginPage(driver);
+	
+		
+		
+	}
+
+	@When("^User enter the email address in the email field$")
+	public void user_enter_the_email_address_in_the_email_field() throws Throwable {
+		LoginPage lp = new LoginPage(driver);
+sendkey(lp.getEmailField(), "arthi.gmail.com");	}
+
+	@When("^User enter the password in the password field$")
+	public void user_enter_the_password_in_the_password_field() throws Throwable {
+		LoginPage lp = new LoginPage(driver);
+		sendkey(lp.getPasswordField(), "12345");
+	}
+
+	@When("^User should click the login$")
+	public void user_should_click_the_login() throws Throwable {
+		LoginPage lp = new LoginPage(driver);
+		clickElement(lp.getLoginButton());
+	}
+
+	@Then("^User should able to login into forget password page$")
+	public void user_should_able_to_login_into_forget_password_page() throws Throwable {
+		LoginPage lp = new LoginPage(driver);
+		
+	}
+
+
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+
+<parameter name ="user" value="abc"/>
+<parameter name ="pass" value ="1234"/>
+<parameter name ="URL" value ="https://google.com"/>
+ 
+
+  <test name="Test">
+  <groups>
+  <run>
+  <include name ="none"/>
+  </run>
+  </groups>
+    <classes>
+      <class name="org.testng.Testing">
+      <methods>
+      </methods>
+      </class>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

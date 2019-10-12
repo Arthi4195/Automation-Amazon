@@ -1,0 +1,30 @@
+package com.testScripts;
+import org.openqa.selenium.WebDriver;
+
+import com.org.baseclass.TestBase;
+import com.pom.Homepage_Amazon;
+
+public class AmazonExecution extends TestBase{
+
+public static WebDriver driver;
+	
+public static void main(String[] args) throws Exception {
+
+		driver = getDriver("chrome");
+		driver.get("http://www.amazon.in‎");
+		System.out.println("Url Launched");
+		
+		Homepage_Amazon Ha = new Homepage_Amazon (driver);
+		
+		System.out.println("mouse over to hello sign in");
+		mouseOver(Ha.getHelloSignin());
+		
+		
+		System.out.println("click signin");
+		clickElement(Ha.getSignIn());
+		
+		
+		
+	}
+
+}

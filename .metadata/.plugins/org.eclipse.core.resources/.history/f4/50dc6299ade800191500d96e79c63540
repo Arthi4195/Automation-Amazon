@@ -1,0 +1,9 @@
+Feature: Facebook Aplication smoke test automation script
+Scenario: Verify the login page
+Given User should be able to launch the application
+Then User should able to see the facebook logo in loginpage
+When Enter the user email id
+And Enter the password
+And User click the login button
+
+
